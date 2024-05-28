@@ -12,7 +12,7 @@ The LCD prompts the user to enter the second number.
 
 The user enters the second number in the same manner as the first, by incrementing the tenth part first, followed by the unit part.
 
-Once the second number is entered, the system displays the "=" sign and proceeds to execute the multiplication operation.
+Once the second number is entered, the system displays the "=" sign and proceeds to execute the multiplication operation
 
 The master CPU sends the first number (tenth and unit parts) to the co-processor, followed by the unit digit of the second number. The co-processor performs the multiplication operation, ensuring there's no overflow. It returns the result (3 digits) to the master CPU in two steps: first the two most significant digits, then the least significant digit. Meanwhile, the master CPU multiplies the first number with the tenth digit of the second number. Upon receiving the output from the co-processor, the master CPU performs the correct addition to obtain the final multiplication result, displayed on the LCD.
 
